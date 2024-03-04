@@ -51,7 +51,7 @@ with st.expander("Explanation"):
 
 #============================================
 
-df = pd.read_csv('geocustomer.csv')
+df = pd.read_csv('dashboard/geocustomer.csv')
 state_payment_counts = df.groupby(['customer_state', 'payment_type']).size().reset_index(name='count')
 st.title('Payment Types by State')
 fig = px.bar(state_payment_counts, 
